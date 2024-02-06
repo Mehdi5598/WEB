@@ -1,2 +1,2 @@
 # WEB
-A web application that store data about previous internships 
+A web application that helps students from CESI Exia find internships
