@@ -1,0 +1,847 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(36, 43, 68, 1);
+}
+
+.class1 {
+  display: flex; 
+  justify-content: space-between; 
+  position: static;
+  z-index: -1;
+}
+
+.angle {
+  width: 90px; 
+  height: 130px; 
+}
+
+.angle1 {
+  width: 550px; 
+  height: 650px; 
+}
+
+.class2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 50px; 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  padding-left: 80px;
+  font-family: 'Trebuchet MS', sans-serif;
+  z-index: 3; 
+}
+
+.Logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.class2 > div > a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.class3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  position: fixed;
+  top: 0;
+  right: 200px;
+  color: white;
+  padding-top: 25px;
+  font-family: 'Trebuchet MS', sans-serif; 
+  z-index: 3;
+}
+
+.class3 button {
+  background-color: rgba(35, 166, 240, 1); 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  font-family: 'Trebuchet MS', sans-serif; 
+  font-size: 16px;
+  cursor: pointer; 
+}
+
+.class3 button:hover {
+  background-color: rgba(35, 166, 240, 0.8); 
+}
+
+.notif {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  position: fixed;
+  top: 0;
+  right: 350px;
+  padding-top: 20px;
+  z-index: 3;
+}
+
+.notif img {
+  transition: transform 0.2s; 
+  cursor: pointer; 
+}
+
+.notif img:hover {
+  transform: scale(1.1); 
+}
+
+.class4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px; 
+  text-align: center;
+  z-index: 1;
+  position: absolute; 
+  top: 20%;
+  left: 25%;
+}
+
+
+.class4 p {
+  margin: 20px 0; 
+  font-family: 'Trebuchet MS'; 
+}
+
+.p1 {
+  color: rgba(35, 143, 208, 1);
+  font-weight: bold;
+}
+
+.h1{
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.p2{
+  color: white;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: rgba(35, 166, 240, 0.8);
+}
+
+.button1 {
+  background-color: rgba(35, 166, 240, 1);
+  border: none;
+}
+
+.button2 {
+  border: 1px solid rgba(35, 166, 240, 1);
+  background-color: transparent;
+}
+
+.class5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 650px; 
+  z-index: 1;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+}
+
+.class6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 820px; 
+  z-index: 1;
+  position: absolute; 
+  top: 50%;
+  left: 70%;
+}
+
+.class7 {
+  display: flex;
+  margin-top: 400px; 
+  z-index: 1;
+  position: absolute; 
+  left: 10%;
+}
+.class7 img {
+  top: 50%;
+}
+
+.class7 h3{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.class7 p{
+  color: white;
+  font-size: 15px;
+}
+
+.class8 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1100px; 
+  z-index: 1;
+  position: absolute; 
+  left: 10%;
+}
+.class8 h3{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.class8 p{
+  color: white;
+  font-size: 15px;
+}
+
+.class9 {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  position: absolute;
+  margin-top: 1350px; 
+  z-index: 1;
+  width: 100%; 
+}
+
+
+.class10 {
+  position: absolute;
+  bottom: 50px; 
+  top : 2250px;
+  left: calc(50% - 450px); 
+  z-index: 2;
+}
+
+.class10 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class10 button:hover{
+
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+
+}
+
+.class11 {
+  position: absolute;
+  bottom: 50px; 
+  top : 2250px;
+  left: calc(50% - 100px); 
+  z-index: 2;
+}
+
+.class11 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class11 button:hover{
+
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+
+}
+
+.class12 {
+  position: absolute;
+  bottom: 50px; 
+  top : 2250px;
+  left: calc(50% + 300px); 
+  z-index: 2;
+}
+
+.class12 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class12 button:hover{
+
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+
+}
+
+.box1 {
+  background-color: white;
+  width: 340px;
+  height: 420px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 50px; 
+  top : 2304px;
+  left: calc(50% - 535px); 
+  z-index: 1;
+}
+
+.box2 {
+  background-color: white;
+  width: 348px;
+  height: 420px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 50px; 
+  top : 2304px;
+  left: calc(50% - 175px); 
+  z-index: 1;
+}
+
+.box3 {
+  background-color: white;
+  width: 340px;
+  height: 420px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 50px; 
+  top : 2304px;
+  left: calc(50% + 193px); 
+  z-index: 1;
+}
+
+
+.class13 h3{
+  position: absolute;
+  top : 20px;
+  left: 20px;
+  color: rgba(35, 166, 240, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.class13 h4{
+  position: absolute;
+  top : 40px;
+  left: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+.class13 p{
+  position: absolute;
+  top : 100px;
+  left: 20px;
+  color: rgba(102, 101, 101, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+}
+
+.class13 img{
+  position: absolute;
+  top : 250px;
+  left: 20px;
+ }
+
+ .class13 .box1 img,
+ .class13 .box2 img,
+ .class13 .box3 img {
+   position: absolute;
+   left: 20px;
+ }
+ 
+ .class13 .box1 img:nth-of-type(2),
+ .class13 .box2 img:nth-of-type(2),
+ .class13 .box3 img:nth-of-type(2) {
+   top: calc(250px + 40px + 10px);
+ }
+ 
+ .class13 button {
+  position: absolute;
+  color: rgba(35, 166, 240, 0.8);
+  border: 1px solid rgba(35, 166, 240, 1);
+  background-color: transparent;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 360px;
+  left:15px;
+}
+
+.class13 .note {
+  display: block;
+  position: relative; 
+  top: 20px;
+  margin-left: 260px;
+}
+
+.class14 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2300px; 
+  z-index: 1;
+  position: absolute; 
+  left: 10%;
+}
+
+.class14 h3{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.class14 p{
+  color: white;
+  font-size: 15px;
+}
+
+.inside {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 100px;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+.inside img {
+  width: 100%; 
+  max-width: calc(33.33% - 20px); 
+}
+
+/* other pages -----------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------- */
+
+
+.search-container {
+  display: flex;
+  top: 30%;
+  right: 70px;
+  justify-content: center;
+  position: absolute; 
+  z-index: 3;
+}
+
+.search-container input[type="search"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 990px; 
+}
+
+.search {
+  padding: 10px 20px;
+  background-color: rgba(35, 166, 240, 1); 
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: rgba(35, 166, 240, 0.8); 
+}
+
+.add {
+  padding: 10px 20px;
+  background-color: #252B42; 
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #222636; 
+}
+
+.class15 {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 100%; 
+}
+
+
+.class16 {
+  position: absolute;
+  bottom: 50px; 
+  top : 520px;
+  left: calc(50% - 450px); 
+  z-index: 2;
+}
+
+.class16 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class16 button:hover{
+
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  
+}
+
+
+.special {
+  position: absolute;
+  background-color: #252B42;
+  color: white;
+  border: 1px solid #252B42;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 300px;
+  left: 320px;
+  z-index: 3;
+}
+
+.special:hover{
+  background-color: #222636; 
+}
+
+.special1 {
+  position: absolute;
+  background-color: #252B42;
+  color: white;
+  border: 1px solid #252B42;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 300px;
+  left: 685px;
+  z-index: 3;
+ }
+
+.special1:hover{
+  background-color: #222636; 
+}
+
+.special2 {
+  position: absolute;
+  background-color: #252B42;
+  color: white;
+  border: 1px solid #252B42;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 300px;
+  left: 1050px;
+  z-index: 3;
+}
+
+.special2:hover{
+  background-color: #222636; 
+}
+
+.class17 {
+  position: absolute;
+  bottom: 50px; 
+  top : 520px;
+  left: calc(50% - 100px); 
+  z-index: 2;
+}
+
+.class17 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class17 button:hover{
+
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+
+}
+
+.class18 {
+  position: absolute;
+  bottom: 50px; 
+  top : 520px;
+  left: calc(50% + 300px); 
+  z-index: 2;
+}
+
+.class18 button {
+  background-color: transparent; 
+  border: none;
+  cursor: pointer;
+}
+
+.class18 button:hover{
+
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+
+}
+
+.boxx1 {
+  background-color: white;
+  width: 340px;
+  height: 470px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 500px; 
+  top : 575px;
+  left: calc(50% - 535px); 
+  z-index: 1;
+}
+
+.boxx2 {
+  background-color: white;
+  width: 348px;
+  height: 470px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 500px; 
+  top : 575px;
+  left: calc(50% - 175px); 
+  z-index: 1;
+}
+
+.boxx3 {
+  background-color: white;
+  width: 340px;
+  height: 470px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 500px; 
+  top : 575px;
+  left: calc(50% + 193px); 
+  z-index: 1;
+}
+
+.class19 h3{
+  position: absolute;
+  top : 20px;
+  left: 20px;
+  color: rgba(35, 166, 240, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.class19 h4{
+  position: absolute;
+  top : 40px;
+  left: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+.class19 p{
+  position: absolute;
+  top : 100px;
+  left: 20px;
+  color: rgba(102, 101, 101, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+}
+
+.class19 img{
+  position: absolute;
+  top : 250px;
+  left: 20px;
+ }
+
+ .class19 .boxx1 img,
+ .class19 .boxx2 img,
+ .class19 .boxx3 img {
+   position: absolute;
+   left: 20px;
+ }
+ 
+ .class19 .boxx1 img:nth-of-type(2),
+ .class19 .boxx2 img:nth-of-type(2),
+ .class19 .boxx3 img:nth-of-type(2) {
+   top: calc(250px + 40px + 10px);
+ }
+ 
+ .class19 button {
+  position: absolute;
+  color: rgba(35, 166, 240, 0.8);
+  border: 1px solid rgba(35, 166, 240, 1);
+  background-color: transparent;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 360px;
+  left:15px;
+}
+
+.class19 .boxx1 button:nth-of-type(2),
+.class19 .boxx2 button:nth-of-type(2),
+.class19 .boxx3 button:nth-of-type(2) {
+  background-color: #252B42;
+  color: white;
+  border: 1px solid #252B42;
+  top: 420px;
+}
+
+.class19 .note1 {
+  display: block;
+  position: relative; 
+  top: 20px;
+  margin-left: 260px;
+}
+
+
+.class20 h3{
+  position: absolute;
+  top : 5px;
+  left: 20px;
+  color: #252B42;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 24px;
+}
+
+.class20 h4{
+  position: absolute;
+  top : 40px;
+  left: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+.class20 p{
+  position: absolute;
+  top : 50px;
+  left: 20px;
+  color: rgba(102, 101, 101, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+}
+
+.class20 img{
+  position: absolute;
+  top : 250px;
+  left: 20px;
+ }
+
+ .class20 .boxx1 img,
+ .class20 .boxx2 img,
+ .class20 .boxx3 img {
+   position: absolute;
+   left: 20px;
+ }
+ 
+ .class20 .boxx1 img:nth-of-type(2),
+ .class20 .boxx2 img:nth-of-type(2),
+ .class20 .boxx3 img:nth-of-type(2) {
+   top: calc(250px + 40px + 10px);
+ }
+ 
+ .class20 button {
+  position: absolute;
+  color: rgba(35, 166, 240, 0.8);
+  border: 1px solid rgba(35, 166, 240, 1);
+  background-color: transparent;
+  border-radius: 20px; 
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px; 
+  cursor: pointer;
+  padding: 12px 24px; 
+  top: 200px;
+  left:15px;
+}
+
+.class20 .boxx1 button:nth-of-type(2),
+.class20 .boxx2 button:nth-of-type(2),
+.class20 .boxx3 button:nth-of-type(2) {
+  background-color: #252B42;
+  color: white;
+  border: 1px solid #252B42;
+  top: 250px;
+}
+
+.class20 .note1 {
+  display: block;
+  position: relative; 
+  top: 20px;
+  margin-left: 260px;
+}
+
+.class20 .boxx1 {
+  background-color: white;
+  width: 340px;
+  height: 300px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 500px; 
+  top : 575px;
+  left: calc(50% - 535px); 
+  z-index: 1;
+}
+
+.class20 .boxx2 {
+background-color: white;
+width: 348px;
+height: 300px;
+border: 1px solid black;
+position: absolute;
+bottom: 500px; 
+top : 575px;
+left: calc(50% - 175px); 
+z-index: 1;
+ }
+
+.class20 .boxx3 {
+  background-color: white;
+  width: 340px;
+  height: 300px;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 500px; 
+  top : 575px;
+  left: calc(50% + 193px); 
+  z-index: 1;
+}
+
