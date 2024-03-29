@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+    rel="stylesheet">
+
+    {{-- <link  href="{{ asset('public/style.css') }}" rel="stylesheet"> --}}
+    <style>
+        
+
+body {
+    background-color: #252b42;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+  }
+  
+  .back {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	top: 135px;
+    left: 430px;
+	z-index: -1;
+  }
+  small{
+    color: gray;
+  }
+  .shape  {
+    width: 750px;
+    height: 480px;
+    background-color: #184c99;
+    clip-path: polygon(0 0, 100% 15%, 95% 75%, 0% 100%); 
+    border-radius: 0px 0px 0px 80px;
+    margin-left: 50px;
+    margin-top: 100px;
+    transform: skew(-10deg);
+  }
+  .container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    margin-left: 0px;
+
+  }
+  .purple{
+    color: rgb(19, 0, 128);
+  }
+
+  * {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+  }
+
+  html{
+    font-size: 14px;
+  }
+
+  a{
+    color: black;
+  }
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+aside {
+    height: 100vh;
+    background:#292e41ad;
+    left: -100%;
+    animation: showMenu 500ms ease forwards;
+}
+@keyframes showMenu {
+    to{
+        left : 0;
+    }
+    
+}
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:  1.4rem;
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.8rem;
+    margin-left: 5px;
+
+}
+
+aside .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .close{
+    display: none;
+}
+
+
+/*side bar*/
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top : 3rem;
+
+}
+
+aside h3{
+    font-style: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: #184c99;
+    margin-left: 2rem;
+    gap : 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease ;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active{
+    background:#184c99;
+    color: rgb(21, 3, 49);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: rgb(21, 3, 49);
+}
+
+aside .sidebar a.active span {
+
+    color: rgb(21, 3, 49);
+    margin-left:calc(1rem - 3px) ;
+}
+
+aside .sidebar a:hover{
+    color: rgb(21, 3, 49);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/*-----------------------------------*/
+
+main{
+
+    margin-top: 1.6rem;
+}
+
+main .insights{
+    margin-top: 2.3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.6rem;
+
+}
+
+main .insights > div {
+    background: rgb(169, 159, 194);
+    padding:  1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 2rem 3rem #184c99;
+}
+
+main .insights > div:hover {
+    box-shadow: none;
+
+}
+
+main .insights >div span{
+    background: #184c99;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #252b42;
+    font-size: 2rem;
+}
+
+main .insights >div .middle{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main  .insights svg{
+
+    width: 7rem;
+    height: 7rem;
+} 
+
+main .insights svg circle {
+    fill: none;
+    stroke: #184c99;
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dashoffset:-30;
+    stroke-dasharray: 200 ;
+}
+
+main .insights .progress .numbers {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------------------------------------------------------*/
+
+main .recent-interships {
+    margin-top: 2rem;
+}
+
+main .recent-interships h2{
+    margin-bottom: 0.8rem;
+}
+
+main .recent-interships table {
+    background: rgb(169, 159, 194) ;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem #1f1da5;
+    transition: all 300ms ease;
+}
+
+main .recent-interships table:hover{
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid #292e41ad;
+    color: #000000;
+}
+
+main table tbody tr:last-child td{
+    border: none;
+
+}
+
+main .recent-interships a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: gray;
+}
+
+
+/*--------------------------------------------*/
+/* right .profile profile-photo{
+
+    height: 40px; 
+width: 40px; 
+background-color: #626262; 
+border-radius: 50%; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+overflow: hidden; 
+}  */
+
+.right{
+    margin-top: 1.4rem;
+}
+
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap :2rem;
+    background: #292e41ad;
+}
+
+.right .top button{
+    display: none;
+}
+
+.right .top .profile {
+    display: flex;
+     gap : 2rem;
+     text-align: right;
+}
+
+/*----------------------------------------------*/
+
+.right .recent-update{
+margin-top: 1rem;
+}
+
+.right .recent-update h2{
+    margin-bottom: 0.8rem;
+}
+.right .recent-update .updates {
+    background: rgb(169, 159, 194);
+    border-radius: 2rem;
+    padding: 1.8rem;
+    box-shadow: 0 2rem 3rem #1f1da5;
+    transition: all 300ms ease;
+
+}
+
+.right .recent-update .updates:hover{
+box-shadow: none;
+
+}
+.right .recent-update .updates .update {
+
+    display: grid;
+    grid-template-columns: 2.6rem auto ;
+    gap : 1rem;
+    margin-bottom: 1rem;
+}
+
+/*-----------------------------------*/
+
+.right .small-stat {
+margin-top:  2rem;
+}
+
+.right .small-stat h2{
+margin-bottom: 0.8rem;
+}
+.right .small-stat .stat{
+    display: flex;
+    align-items: center;
+    background: rgb(169, 159, 194);
+    border-radius: 1.2rem;
+    padding: 1.4rem 1.8rem;
+    box-shadow: 0 2rem 3rem #1f1da5;
+    transition: all 300ms ease;
+    margin-bottom: 0.7rem;
+    gap: 1rem;
+}
+
+.right .small-stat .stat:hover{
+    box-shadow: none;
+}
+
+.right .small-stat .stat .right{
+
+    display: flex;
+    justify-content:  space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .small-stat .stat .icon{
+    padding: 0.6rem;
+    color: #252b42;
+    border-radius: 50%;
+    background: #184c99;
+    display: flex;
+
+}
+
+/* Media queries*/
+
+@media screen  and (max-width: 1200px){
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+    aside .logo {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+    }
+   
+    
+    main .insights{
+        grid-template-columns: 1fr;
+        gap : 0
+    }
+    main .recent-interships {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .recent-interships table {
+        width: 78vw;
+    }
+   
+}
+
+@media screen  and (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    aside {
+        position: fixed;
+        left: 0;
+        background:#252b42;
+        width: 18rem;
+        z-index: 3;
+        height: 100vh;
+        padding-right: 1.8rem;
+        display: none;
+    }
+    
+    aside .logo {
+        margin-left: 1rem;
+        display: flex;
+    }
+    aside .logo h2 {
+        display: inline;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    aside .close {
+        display: inline-block;
+        cursor: pointer;
+    }
+    main {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+    main .recent-interships{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+    main .recent-interships table{
+        width : 100%;
+        margin: 0;  
+    }
+
+    .right{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding:  0 0.8rem;
+        height: 4.6rem;
+        background:#292e41ad;
+        width: 100%;
+        z-index: 2;
+    }
+    .right .top .profile .perso {
+        display: none;
+    }
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right .top button span {
+        font-size: 2rem;
+    }
+}
+
+/* ---------------------------STUDENT PAGE------------------------------------*/
+
+
+.creation-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    margin-bottom: 15px;
+    display: block;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #252b42;
+    border-radius: 5px;
+}
+.form-group button {
+    background-color: #252b42;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px;
+    width: 100%;
+    margin-left: 0px;
+}
+input::placeholder{
+    
+    color: gray;
+}
+        </style>
+</head>
+<body>
+    <div class="back">
+        <div class="shape"></div>
+      </div>
+    </div>
+
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                 <!-- <img src=""> logo -->
+                 <h2>NE<span class="purple">XT</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                        </span>
+                     </div>
+            </div>
+            <div class="sidebar">
+                <!-- Dashboard -->
+              <a href="{{asset('dashboard')}}" >
+                <span class="material-icons-sharp">
+                    grid_view</span>
+                    <h3>Dashboard</h3>
+              </a> 
+              <!-- Student -->
+              <a href="{{asset('student')}}" class="active">
+                <span class="material-icons-sharp">
+                    face_unlock
+                    </span>
+                    <h3>Student</h3>
+              </a> 
+              <!-- Pilot -->
+              <a href="#">
+                <span class="material-icons-sharp">
+                    supervisor_account
+                    </span>
+                    <h3>Pilot</h3>
+              </a>
+              <!-- Entrprise -->
+              <a href="#">
+                <span class="material-icons-sharp">
+                    apartment
+                    </span>
+                    <h3>Entrprise</h3>
+              </a>
+              <!-- Analytics -->
+              <a href="#">
+                <span class="material-icons-sharp">
+                    analytics
+                    </span>
+                    <h3>Analytics</h3>
+              </a>
+            </div>
+        </aside>
+        <!---------------------------->
+        <div class="creation-box">
+            @yield('content')
+        </div>
+        <!---------------------------------------------------------->
+        <div class="right">
+            <div class="top">
+              <button id="menu-btn">
+                <span class="material-icons-sharp">
+                  menu
+                  </span>     
+              </button>
+            </div>
+            <!--------------------------------->
+    </div>
+
+</body>
+</html>
