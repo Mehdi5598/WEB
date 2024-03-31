@@ -8,9 +8,40 @@ use Illuminate\Http\Request;
 
 class InternshipsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $internships = Internships::with('competences')->get();
+        $query = Internships::query();
+
+        if ($request->filled('nom')) {
+            $query->where('nom', 'like', '%' . $request->nom . '%');
+        }
+        if ($request->filled('localite')) {
+            $query->where('localite', 'like', '%' . $request->localite . '%');
+        }
+        if ($request->filled('duree')) {
+            $query->where('duree', 'like', '%' . $request->duree . '%');
+        }
+        if ($request->filled('promo')) {
+            $query->where('promo', $request->promo);
+        }
+        if ($request->filled('salaire')) {
+            $query->where('salaire', '>=', $request->salaire);
+        }
+        if ($request->filled('entreprise')) {
+            $query->where('entreprise', 'like', '%' . $request->entreprise . '%');
+        }
+        if ($request->filled('date')) {
+            $query->whereDate('date', '=', $request->date);
+        }
+        if ($request->filled('competences')) {
+            $competences = array_map('trim', explode(',', $request->competences));
+            $query->whereHas('competences', function ($q) use ($competences) {
+                $q->whereIn('name', $competences);
+            });
+        }
+
+        $internships = $query->get();
+
         return view('internships.index', compact('internships'));
     }
 
