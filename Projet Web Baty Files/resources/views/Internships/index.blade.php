@@ -50,7 +50,22 @@ use Carbon\Carbon;
 @section('content')
 <main>
     <h1>Internships List</h1>
-    <a href="{{ route('internships.create') }}" style="padding: 10px; background-color: #4CAF50; color: white; text-decoration: none; margin-bottom: 10px; display: inline-block;">Create New Internship</a>
+    <a class="create" href="{{ route('internships.create') }}"><button>Create New Internship</button> </a>
+    <div>
+        <form action="{{ route('internships.index') }}" method="GET">
+            <div>
+                <input type="text" name="nom" placeholder="Filter by Nom" value="{{ request('nom') }}">
+                <input type="text" name="localite" placeholder="Filter by Localite" value="{{ request('localite') }}">
+                <input type="text" name="duree" placeholder="Filter by Duree" value="{{ request('duree') }}">
+                <input type="text" name="promo" placeholder="Filter by Promo" value="{{ request('promo') }}">
+                <input type="text" name="salaire" placeholder="Filter by Salaire" value="{{ request('salaire') }}">
+                <input type="text" name="entreprise" placeholder="Filter by Entreprise" value="{{ request('entreprise') }}">
+                <input type="date" name="date" placeholder="Filter by Date" value="{{ request('date') }}">
+                <input type="text" name="competences" placeholder="Filter by Competences" value="{{ request('competences') }}">
+            </div>
+            <button type="submit">Apply Filters</button>
+        </form>
+    </div>
 
     <table border="1">
         <thead>
@@ -82,11 +97,9 @@ use Carbon\Carbon;
                     <span>{{ $competence->name }}</span>{{ !$loop->last ? ', ' : '' }}
                     @endforeach
                 </td>
-                <!-- Edit button -->
                 <td>
                     <a href="{{ route('internships.edit', $internship->id) }}">Edit</a>
                 </td>
-                <!-- Delete button -->
                 <td>
                     <form action="{{ route('internships.destroy', $internship->id) }}" method="POST">
                         @csrf
